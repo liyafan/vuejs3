@@ -1,0 +1,38 @@
+@mixin flex($just: center,$dir: column){
+	display: flex;
+	justify-content:$just;
+	align-items:center;
+	flex-direction: $dir;
+	flex-wrap: wrap;
+}
+body{
+	
+}
+section{
+	overflow-y: scroll;
+	.listMain{
+		margin:{
+			left: -1px;
+		}
+		@include flex(space-between,row);
+		li{
+			@include flex();
+			box-sizing: border-box;
+			width: 50%;
+			height: 2.23rem;
+			border:{
+				right: 1px #dcdcdc solid;
+				bottom: 1px #dcdcdc solid;
+			};
+			font: {
+				size: 0.26rem;
+			};
+			background: {
+				color: #fff;
+			};
+			p{
+				margin-top: 0.4rem;
+			}
+		}
+	}
+}
